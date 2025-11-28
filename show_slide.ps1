@@ -1,0 +1,1 @@
+quarto preview ./slides_src/index.qmd

@@ -1,10 +1,16 @@
 ---
+title: "地端AIAgent+AutoGen<br/>Token Intelligence無極限"
+title-slide-attributes:
+  data-background-image: ./pics/TitleBackground_light.svg
+  data-background-size: cover
+  data-background-opacity: "1.0"
 author: 老鮑伯
 format:
     revealjs:
         width: 1300
         height: 1000
         slide-tone: false
+        slide-level: 3
         theme: simple
         menu:
             side: right
@@ -34,7 +40,7 @@ code-annotations: below
 ::: {.column width="80%"}
 
 * What and Why is Agentic AI?
-* AutoGen for .NET Overview
+* AutoGen for .NET (v0.2.x) overview`
 * Local LLM running options & caveats
 * Demo
 
@@ -49,3 +55,22 @@ code-annotations: below
 
 :::
 ::::
+
+# Q & A
+
+:::: {.columns}
+::: {.column width="30%"}
+
+:::: {.text-center}
+Any Questions?<br/>🙋‍♂️🙋‍♀️🙋
+::::
+
+:::
+::: {.column width="70%"}
+
+![](./pics/NextGenOfDeveloperInAiAge.png){width="78%" fig-align="center"}
+
+:::
+::::
+
+# Sponsors { style="visibility: hidden;" visibility="uncounted" background-image="./pics/EndSlide_light.svg" background-position="center" background-repeat="no-repeat" background-size="100%"}
