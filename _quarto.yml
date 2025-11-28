@@ -1,4 +1,0 @@
-project:
-  title: "地端AIAgent+AutoGen, Token Intelligence無極限"
-  render:
-  - slides_src/index.qmd
