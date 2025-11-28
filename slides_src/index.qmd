@@ -1,0 +1,51 @@
+---
+author: 老鮑伯
+format:
+    revealjs:
+        width: 1300
+        height: 1000
+        slide-tone: false
+        theme: simple
+        menu:
+            side: right
+        slide-number: true
+        include-in-header: 
+            text: |
+                <style>
+                .center-xy {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translateY(-50%), translateX(-50%);
+                transform: translateY(-50%), translateX(-50%);
+                }
+                .text-center {
+                text-align: center;
+                }
+                </style>
+from: markdown+emoji
+code-annotations: below
+---
+
+# Agenda
+
+:::: {.columns}
+::: {.column width="80%"}
+
+* What and Why is Agentic AI?
+* AutoGen for .NET Overview
+* Local LLM running options & caveats
+* Demo
+
+:::
+::: {.column width="20%"}
+
+{{< qrcode https://windperson.github.io/AutoGenLocalAI-slide/ width=240 height=240 >}}
+
+::::{.text-center .smaller}
+**Slide URL**
+::::
+
+:::
+::::
