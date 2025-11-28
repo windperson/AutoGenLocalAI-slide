@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="老鮑伯">
-  <title>地端AIAgent+AutoGen Token Intelligence無極限</title>
+  <title>地端 AI Agent + AutoGen Token Intelligence無極限</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -141,7 +141,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="./pics/TitleBackground_light.svg" data-background-opacity="1.0" data-background-size="cover" class="quarto-title-block center">
-  <h1 class="title">地端AIAgent+AutoGen<br>Token Intelligence無極限</h1>
+  <h1 class="title">地端 AI Agent + AutoGen<br>Token Intelligence無極限</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -152,6 +152,7 @@
 </div>
 
 </section>
+<section>
 <section id="agenda" class="title-slide slide level1 center">
 <h1>Agenda</h1>
 <div class="columns">
@@ -159,8 +160,8 @@
 <ul>
 <li>What and Why is Agentic AI?</li>
 <li><strong>AutoGen for .NET</strong> (v0.2.x) overview</li>
-<li>Local LLM running options &amp; caveats</li>
-<li>Demo &amp; Future vision</li>
+<li>Local LLM AI inference options</li>
+<li>Demo &amp; Future thoughts</li>
 </ul>
 </div><div class="column" style="width:20%;">
 <div id="" class="qrcode"></div>
@@ -178,7 +179,132 @@
 </div>
 </div></div>
 </section>
+<section id="autogen-for-.net-overview" class="slide level2">
+<h2>AutoGen for .NET Overview</h2>
+<p>AutoGen <img data-src="./pics/AutoGen_icon.png" height="60"></p>
+<p>An open-source framework specific for build LLM Agentic AI software, provide both Python &amp; .NET C#:</p>
+<ul>
+<li>Python: <a href="https://microsoft.github.io/autogen/stable/" class="uri">https://microsoft.github.io/autogen/stable/</a></li>
+<li>.NET C# porting:
+<ul>
+<li>(v0.2.x) <a href="https://microsoft.github.io/autogen-for-net/index.html" class="uri">https://microsoft.github.io/autogen-for-net/index.html</a></li>
+<li>(v0.4dev) <a href="https://microsoft.github.io/autogen/dotnet/dev/" class="uri">https://microsoft.github.io/autogen/dotnet/dev/</a></li>
+</ul></li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>It will also as <a href="https://github.com/microsoft/semantic-kernel"><strong>Semnantic Kernel</strong></a>, being replaced by <a href="https://github.com/microsoft/agent-framework"><strong>Microsoft Agent Framework</strong></a> in near future:<br> <a href="https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/" class="uri">https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/</a></p>
+</div>
+</div>
+</div>
+<p>And because of that, another related open source project <a href="https://github.com/ag2ai/ag2"><strong>AG2: Open-Source AgentOS for AI Agents</strong></a> is started to provide a truly “Open-Source” Agentic AI framework.</p>
+</section>
+<section id="autogen-design-concepts" class="slide level2 small scrollable">
+<h2>AutoGen design concepts</h2>
+<p>AutoGen (Python) is designed to simplify the development of agentic AI applications by providing:</p>
+<ul>
+<li><strong>Agent</strong>:<br>Autonomous entities that can perform tasks, make decisions, and interact with other agents or users.</li>
+<li><strong>Agent Runtime Environment</strong>:<br>Standalone or Distributed runtime environment, facilitates communication between agents, manages their identities and lifecycles, and enforce security and privacy boundaries. <img data-src="./pics/application-stack.svg"><br>So it is possible to run agents across multiple machines:<br><img data-src="./pics/architecture-distributed.svg"><br></li>
+<li><strong>Memory</strong>:<br>Included in <a href="https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html">“AgentChat” package</a>, Mechanisms for agents to retain and recall information, facilitating long-term interactions and learning.</li>
+<li><strong>Messaging</strong>:<br>Provids Topic and Subscription ways for either direct or broadcast communication between agents.</li>
+<li><strong>Tool Use</strong>:<br>Enables agents to utilize external tools and APIs to enhance their capabilities and perform complex tasks.</li>
+<li><strong>Workbench</strong>:<br>Provides a collection of Tools for agents to use, including <a href="https://modelcontextprotocol.io/">Model Context Protocol (MCP)</a>.</li>
+<li><strong>Logging &amp; Monitoring</strong>:<br>Built-in support for logging and monitoring agent activities via <a href="https://opentelemetry.io/">OpenTelemetry</a>, aiding in debugging and performance analysis.</li>
+<li><strong>Group Chat/Workflow</strong>:<br>Supports multi-agent various types of group chat and workflow orchestration, enabling complex interactions and collaborations among agents.</li>
+</ul>
+</section>
+<section id="autogen-for-.net-features" class="slide level2 small scrollable">
+<h2>AutoGen for .NET features</h2>
+<p>Since the AutoGen for .NET (C#) is a porting from Python ones, its features are much limited and partial:<br>(And only the v0.2.x is a complete porting)</p>
+<ul>
+<li><strong>Agent Framework</strong>:<br>Create autonomous agents that either is code logic based or LLM powered.</li>
+<li><strong>Typed Message</strong>:<br>Utilizes C# strong typing to define message structures, enhancing code reliability and maintainability.</li>
+<li><strong>Middlewares</strong>:<br>Support for middlewares to intercept and process messages between agents, enabling custom behaviors and functionalities.</li>
+<li><strong>Group Chat</strong>:<br>Only have two types of group chat: <a href="https://microsoft.github.io/autogen-for-net/articles/Group-chat-overview.html">Round-Robin &amp; Dynamic</a>.</li>
+<li><strong>Tool Use</strong>:<br>Agents can use tools (Function call) either by <a href="https://microsoft.github.io/autogen-for-net/articles/Create-type-safe-function-call.html">defined in C# type-safe function code via <strong>AutoGen.SourceGenerator</strong> package</a> or <a href="https://learn.microsoft.com/en-us/dotnet/ai/quickstarts/use-function-calling">using <strong>Microsoft.Extensions.AI</strong> library wrapped .NET functions</a>.</li>
+</ul>
+</section>
+<section id="autogen-for-.net-demo-code" class="slide level2 small">
+<h2>AutoGen for .NET demo code</h2>
+<ul>
+<li><a href="https://github.com/windperson/DotnetConf2025Demo/tree/main/SimpleReverseInputAgentDemo" target="_blank">Simple Reverse Input Agent Demo</a> : Shows how to creat a simple agent that reverses user input via pure C# code logic.</li>
+<li><a href="https://github.com/windperson/DotnetConf2025Demo/tree/main/LocalLLMAgentDemo" target="_blank">Using Local LLM with AutoGen for .NET Demo</a> : Shows how to use local LLM model (via LM Studio or some other app can provide OpenAI compatible RESTful API) with AutoGen for .NET to create an agent that can answer user questions.</li>
+<li><a href="https://github.com/windperson/DotnetConf2025Demo/tree/main/MultipleAgents" target="_blank">Teacher-Student Tutoring Demo using Local LLMs</a> : Shows simplest multi-agent interacting pattern with Teacher-Agent and Student-Agent, both using local LLM models.</li>
+</ul>
+</section>
+<section id="local-llm-architecture-overview" class="slide level2">
+<h2>Local LLM architecture overview</h2>
+<img data-src="./pics/Local_AI_architect.svg" class="r-stretch">
+<p>We only care about using Local LLM model that can provide OpenAI compatible RESTful API endpoint, so that AutoGen for .NET agent can use it as LLM backend service.</p>
+</section>
+<section id="xpu-tops-myth" class="slide level2">
+<h2>xPU TOPs myth</h2>
+<img data-src="./pics/Intel_total_TOPs.png" class="r-stretch">
+<p>Currrently most of <strong><em>NPU</em></strong> are only support ONNX model format, and lack of some advanced features(ex: function-calling) that Agentic AI usually need.</p>
+</section>
+<section id="total-vram-myth" class="slide level2">
+<h2>Total VRAM myth</h2>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./pics/AMD_iGPU_dGPU_config_LMStudio.png" class="fragment nostretch fade-out quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./pics/AMD_GPU_ROCm_LMStudio_error.png" class="fragment nostretch fade-in quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="asus-ascent-gx10" class="slide level2">
+<h2><a href="https://www.asus.com/us/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/" target="_blank">ASUS Ascent GX10</a></h2>
+<img data-src="./pics/ASUSAscentGX10.png" class="r-stretch">
+</section>
+<section class="slide level2">
 
+<p>It has extensible cable that can connect multiple machines together for settup up local AI inference cluster.</p>
+<img data-src="./pics/ASUSAscentGX10_backview.png" class="r-stretch">
+</section>
+<section id="external-thunderbolt-gpu-enclosure" class="slide level2">
+<h2>External Thunderbolt GPU enclosure</h2>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./pics/RTXA5000_1.png" class="fragment nostretch fade-out quarto-figure quarto-figure-center" style="width:50.0%;height:60.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./pics/RTXA5000_2.png" class="fragment nostretch fade-in-then-out quarto-figure quarto-figure-center" style="width:100.0%;height:70.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./pics/RTXA5000_3.png" class="fragment nostretch fade-in quarto-figure quarto-figure-center" style="width:50.0%;height:30.0%"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="current-speed-winner-cuda" class="slide level2">
+<h2>Current speed winner (CUDA)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="./pics/Nvidia_gpt-oss-20b.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="./pics/AMD_gpt-oss-20b.png"></p>
+</div></div>
+<blockquote>
+<p>The more you buy, the more <strong>(<em>Time</em>)</strong> you save!</p>
+</blockquote>
+</section></section>
 <section id="resources-references" class="title-slide slide level1 center" style="font-size: 0.7em;">
 <h1>Resources &amp; References</h1>
 <div style="overflow-y: scroll; height: 860px;">
@@ -194,6 +320,7 @@
 <li><a href="https://pub.towardsai.net/autogen-ag2-and-semantic-kernel-complete-guide-971cdeefe1e9">AutoGen, AG2, and Semantic Kernel: Complete Guide</a></li>
 <li><a href="https://github.com/marconsilva/AgenticWorkshop-AutoGen">🧑‍💻 Agentic AI Workshop - AutoGen</a></li>
 <li><a href="https://github.com/brnbrns/ai-examples/tree/main/agnet">🧑‍💻 AgenticAI Practices - AutoGen &amp; Semantic Kernel Demonstration</a></li>
+<li><a href="https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/">Introducing Microsoft Agent Framework: The Open-Source Engine for Agentic AI Apps</a></li>
 <li><a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/">AutoGen to Microsoft Agent Framework Migration Guide</a></li>
 <li><a href="https://youtu.be/JlzteydCK_Q?si=0-YZUVPkU3RBgo4C">🎞️ Deep Dive into Microsoft Agent Framework for AutoGen Users</a></li>
 <li><a href="https://blog.nashtechglobal.com/crafting-agents-in-autogen-net/">Assistant Agent &amp; User Proxy Agent use cases explain</a></li>
@@ -204,6 +331,7 @@
 <li><a href="https://github.com/LittleLittleCloud/Agent-ChatRoom">Agent-ChatRoom</a></li>
 <li><a href="https://github.com/LittleLittleCloud/StepWise">StepWise</a></li>
 <li><a href="https://github.com/dotnet/machinelearning/tree/v5.0.0/src/Microsoft.ML.GenAI.Core">ML.NET <strong><em>Microsoft.ML.GenAI.Core</em></strong> nuget source code</a></li>
+<li><a href="https://github.com/microsoft/agent-framework/tree/main/dotnet/samples/GettingStarted/AgentProviders/Agent_With_ONNX">WARNING: ONNX doesn’t support function calling, so any function tools passed to the agent will be ignored.</a></li>
 </ul>
 <hr>
 <p><span style="font-size: 1.5em;"><em>Local LLM Related Resources</em></span></p>
