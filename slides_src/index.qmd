@@ -43,7 +43,6 @@ editor:
 * What and Why is Agentic AI?
 * **AutoGen for .NET** (v0.2.x) overview
 * Local LLM AI inference options 
-* Demo & Future thoughts
 
 :::
 ::: {.column width="20%"}
@@ -57,9 +56,47 @@ editor:
 :::
 ::::
 
+## What and Why is Agentic AI?
+
+>In computer science, a software _"agent"_ is a computer program that acts for a user or another program in a relationship of agency.
+
+* Agentic AI is an advanced form of artificial intelligence that possesses autonomous decision-making capabilities, allowing it to perform complex tasks and interact with its environment without constant human intervention.
+
+![](./pics/AutoGen_Idea_Agent.png){.r-stretch}
+
+## Local LLM AI Agent benefits
+
+:::: {.columns}
+::: {.column width="50%"}
+* Less latency(faster response)
+* Enhanced privacy
+* Cost efficiency
+* Offline functionality
+* Other reasons
+:::
+::: {.column width="50%"}
+
+:::: {.r-stack}
+![](./pics/AI_nationalism.png){.fragment .nostretch fig-align="center" width="100%" height="100%" .fade-in}
+::::
+
+:::
+::::
+
+##
+
+![](./pics/You_still_have_two.png){.r-stretch}
+
+<https://www.facebook.com/BiTeXiaoTu>
+
 {{< include "_AutoGen_overview.qmd" >}}
 
 {{< include "_LocalLLM.qmd" >}}
+
+## Demo
+
+<https://youtu.be/HLNYCwgk5fU?si=Gw6Xkkx1fZlsVQ_C&t=480>
+![](./pics/LLM_AI_livedemo.png){.r-stretch}
 
 # Resources & References {style="font-size: 0.7em;"}
 

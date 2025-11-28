@@ -4,6 +4,8 @@ editor:
     render-on-save: true
 ---
 
+# Local LLM AI inference options
+
 ## Local LLM architecture overview
 
 ![](./pics/Local_AI_architect.svg){.r-stretch}
@@ -15,6 +17,10 @@ We only care about using Local LLM model that can provide OpenAI compatible REST
 ![](./pics/Intel_total_TOPs.png){.r-stretch}
 
 Currrently most of **_NPU_** are only support ONNX model format, and lack of some advanced features(ex: function-calling) that Agentic AI usually need.
+
+## Total VRAM myth
+
+![](./pics/AMD_UMA.png){.r-stretch}
 
 ## Total VRAM myth
 
@@ -45,7 +51,7 @@ It has extensible cable that can connect multiple machines together for settup u
 ![](./pics/RTXA5000_3.png){.fragment .nostretch fig-align="center" width="50%" height="30%" .fade-in }
 :::
 
-## Current speed winner (CUDA)
+## Current speed leader (nVida CUDA)
 
 ::: columns
 ::: {.column width="50%"}
