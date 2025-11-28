@@ -40,9 +40,9 @@ code-annotations: below
 ::: {.column width="80%"}
 
 * What and Why is Agentic AI?
-* AutoGen for .NET (v0.2.x) overview`
+* **AutoGen for .NET** (v0.2.x) overview
 * Local LLM running options & caveats
-* Demo
+* Demo & Future vision 
 
 :::
 ::: {.column width="20%"}
@@ -56,6 +56,58 @@ code-annotations: below
 :::
 ::::
 
+# Resources & References {style="font-size: 0.7em;"}
+
+::: {style="overflow-y: scroll; height: 860px;"}
+
+[_AutoGen & Agentic AI_]{style="font-size: 1.5em;"}
+
+* [AutoGen for .NET GitHub Repository](https://github.com/microsoft/autogen/tree/main/dotnet)
+* [AutoGen for .NET (v0.2.*) Documentation](https://microsoft.github.io/autogen-for-net/index.html)
+* [AutoGen .NET (v0.4-dev) Documentation](https://microsoft.github.io/autogen/dotnet/dev/)
+* [AutoGen (Python) v0.2 Documentation](https://microsoft.github.io/autogen/0.2/docs/Getting-Started)
+* [🎞️ Exploring AI Agents with AutoGen in .NET](https://www.youtube.com/live/HoWlm3tgRCI?si=ZtmnZLbOAa8bm2Eq) <br/> [source code](https://github.com/joslat/AgenticAIAutoGen)
+* [📃 AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation](https://arxiv.org/abs/2308.08155)
+* [📃 More Agents is All You Need](https://arxiv.org/abs/2402.05120)
+* [AutoGen, AG2, and Semantic Kernel: Complete Guide](https://pub.towardsai.net/autogen-ag2-and-semantic-kernel-complete-guide-971cdeefe1e9)
+* [🧑‍💻 Agentic AI Workshop - AutoGen](https://github.com/marconsilva/AgenticWorkshop-AutoGen)
+* [🧑‍💻 AgenticAI Practices - AutoGen & Semantic Kernel Demonstration](https://github.com/brnbrns/ai-examples/tree/main/agnet)
+* [AutoGen to Microsoft Agent Framework Migration Guide](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/)
+* [Assistant Agent & User Proxy Agent use cases explain](https://blog.nashtechglobal.com/crafting-agents-in-autogen-net/)
+* [Tool call with local model using Ollama and AutoGen.Net](https://dev.to/littlelittlecloud/tool-call-with-local-model-using-ollama-and-autogennet-3o64)
+* [📚 AI Agent 開發：做與學 AutoGen 入門與進階](https://www.tenlong.com.tw/products/9787122479075)
+* [LLM Apps with .Net: Implement a Reflection Agent with AutoGen and SemanticKernel](https://medium.com/data-science-collective/llm-apps-with-net-implement-a-reflection-agent-with-autogen-and-semantickernel-e5ce1fb36142)
+* [Use AutoGen for Local LLMs](https://docs.ag2.ai/latest/docs/blog/2023/07/14/Local-LLMs/)
+* [Agent-ChatRoom](https://github.com/LittleLittleCloud/Agent-ChatRoom)
+* [StepWise](https://github.com/LittleLittleCloud/StepWise)
+* [ML.NET ***Microsoft.ML.GenAI.Core*** nuget source code](https://github.com/dotnet/machinelearning/tree/v5.0.0/src/Microsoft.ML.GenAI.Core)
+
+---
+
+[_Local LLM Related Resources_]{style="font-size: 1.5em;"}
+
+* [📃 Small Language Models are the Future of Agentic AI](https://arxiv.org/abs/2506.02153)
+* [📃 On the Fundamental Limits of LLMs at Scale](https://arxiv.org/abs/2511.12869)
+* [What is Quantization and Why It Matters for AI Inference?](https://medium.com/@isanghao/what-is-quantization-and-why-it-matters-for-inference-c62135f7cfa7)
+* [How OpenAI used a new data type to cut inference costs by 75%](https://www.theregister.com/2025/08/10/openai_mxfp4/)
+* [How To Calculate GPU VRAM Requirements for an Large-Language Model](https://apxml.com/posts/how-to-calculate-vram-requirements-for-an-llm)
+* [Semantic Kernel: One Client for OpenAI, Azure & Local LLMs](https://amarozka.dev/semantic-kernel-openai-azure-local-models/)
+* [NVIDIA App Driver Comparisons](https://www.nvidia.com/en-us/software/nvidia-app/driver-comparisons/)
+* [How Small Language Models Are Key to Scalable Agentic AI](https://developer.nvidia.com/blog/how-small-language-models-are-key-to-scalable-agentic-ai/)
+* [Agentic AI with OpenVINO Model Server](https://github.com/openvinotoolkit/model_server/tree/main/demos/continuous_batching/agentic_ai)
+* [ROCm 7.9 Technology Preview: ROCm Core SDK and TheRock Build System](https://rocm.blogs.amd.com/software-tools-optimization/therock/README.html)
+* [現僅蘋果M1力挺　UMA已消失在處理器世界？](https://www.eettaiwan.com/20210820nt61-uma-has-disappeared-in-the-processor-world/)
+* [AMD Ryzen AI Max+395: A Leap Forward in Generative AI Performance with Consumer PC](https://www.amd.com/fr/developer/resources/technical-articles/2025/amd-ryzen-ai-max-395--a-leap-forward-in-generative-ai-performanc.html)
+* [Strix Halo (395)本地运行LLM测试](https://blog.hjc.im/strix-halo-local-llm.html)
+* [⁉️ Conversation roles must alternate user/assistant/user/assistant/... #2112](https://github.com/vllm-project/vllm/discussions/2112)
+* [⁉️ ROCm on WSL #5275](https://github.com/ollama/ollama/issues/5275)
+* [⁉️ ROCm is unable to load TensileLibrary_lazy_gfx1201.dat - falls back to tensil. #1163](https://github.com/lmstudio-ai/lmstudio-bug-tracker/issues/1163)
+* [Get started with Phi Silica](https://learn.microsoft.com/en-us/windows/ai/apis/phi-silica)
+
+---
+
+:::
+
 # Q & A
 
 :::: {.columns}
@@ -68,7 +120,7 @@ Any Questions?<br/>🙋‍♂️🙋‍♀️🙋
 :::
 ::: {.column width="70%"}
 
-![](./pics/NextGenOfDeveloperInAiAge.png){width="78%" fig-align="center"}
+![](./pics/NextGenOfDeveloperInAiAge.png){width="100%" fig-align="center"}
 
 :::
 ::::
