@@ -1,0 +1,53 @@
+---
+# AutoGen for .NET Overview
+editor:
+    render-on-save: true
+---
+
+## AutoGen for .NET Overview
+
+AutoGen ![](./pics/AutoGen_icon.png){height=60px}
+
+An open-source framework specific for build LLM Agentic AI software, provide both Python & .NET C#:
+
+* Python: <https://microsoft.github.io/autogen/stable/>
+* .NET C# porting:
+  + (v0.2.x) <https://microsoft.github.io/autogen-for-net/index.html> 
+  + (v0.4dev) <https://microsoft.github.io/autogen/dotnet/dev/>
+
+:::{.callout-important}
+It will also as [**Semnantic Kernel**](https://github.com/microsoft/semantic-kernel), being replaced by [**Microsoft Agent Framework**](https://github.com/microsoft/agent-framework) in near future:<br/>
+<https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/>
+:::
+
+And because of that, another related open source project [**AG2: Open-Source AgentOS for AI Agents**](https://github.com/ag2ai/ag2) is started to provide a truly "Open-Source" Agentic AI framework.
+
+## AutoGen design concepts {.small .scrollable}
+
+AutoGen (Python) is designed to simplify the development of agentic AI applications by providing:
+
+* **Agent**:<br/>Autonomous entities that can perform tasks, make decisions, and interact with other agents or users.
+* **Agent Runtime Environment**:<br/>Standalone or Distributed runtime environment, facilitates communication between agents, manages their identities and lifecycles, and enforce security and privacy boundaries.
+   ![](./pics/application-stack.svg)<br/>So it is possible to run agents across multiple machines:<br/>![](./pics/architecture-distributed.svg)<br/>
+* **Memory**:<br/>Included in ["AgentChat" package](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html), Mechanisms for agents to retain and recall information, facilitating long-term interactions and learning.
+* **Messaging**:<br/>Provids Topic and Subscription ways for either direct or broadcast communication between agents.
+* **Tool Use**:<br/>Enables agents to utilize external tools and APIs to enhance their capabilities and perform complex tasks.
+* **Workbench**:<br/>Provides a collection of Tools for agents to use, including [Model Context Protocol (MCP)](https://modelcontextprotocol.io/).
+* **Logging & Monitoring**:<br/>Built-in support for logging and monitoring agent activities via [OpenTelemetry](https://opentelemetry.io/), aiding in debugging and performance analysis.
+* **Group Chat/Workflow**:<br/>Supports multi-agent various types of group chat and workflow orchestration, enabling complex interactions and collaborations among agents.
+
+## AutoGen for .NET features {.small .scrollable}
+
+Since the AutoGen for .NET (C#) is a porting from Python ones, its features are much limited and partial:<br/>(And only the v0.2.x is a complete porting)
+
+* **Agent Framework**:<br/>Create autonomous agents that either is code logic based or LLM powered.
+* **Typed Message**:<br/>Utilizes C# strong typing to define message structures, enhancing code reliability and maintainability.
+* **Middlewares**:<br/>Support for middlewares to intercept and process messages between agents, enabling custom behaviors and functionalities.
+* **Group Chat**:<br/>Only have two types of group chat: [Round-Robin & Dynamic](https://microsoft.github.io/autogen-for-net/articles/Group-chat-overview.html).
+* **Tool Use**:<br/>Agents can use tools (Function call) either by [defined in C# type-safe function code via **AutoGen.SourceGenerator** package](https://microsoft.github.io/autogen-for-net/articles/Create-type-safe-function-call.html) or [using **Microsoft.Extensions.AI** library wrapped .NET functions](https://learn.microsoft.com/en-us/dotnet/ai/quickstarts/use-function-calling).
+
+## AutoGen for .NET demo code {.small}
+
+* [Simple Reverse Input Agent Demo](https://github.com/windperson/DotnetConf2025Demo/tree/main/SimpleReverseInputAgentDemo){target="_blank"} : Shows how to creat a simple agent that reverses user input via pure C# code logic.
+* [Using Local LLM with AutoGen for .NET Demo](https://github.com/windperson/DotnetConf2025Demo/tree/main/LocalLLMAgentDemo){target="_blank"} : Shows how to use local LLM model (via LM Studio or some other app can provide OpenAI compatible RESTful API) with AutoGen for .NET to create an agent that can answer user questions.
+* [Teacher-Student Tutoring Demo using Local LLMs](https://github.com/windperson/DotnetConf2025Demo/tree/main/MultipleAgents){target="_blank"} : Shows simplest multi-agent interacting pattern with Teacher-Agent and Student-Agent, both using local LLM models.

@@ -1,5 +1,5 @@
 ---
-title: "地端AIAgent+AutoGen<br/>Token Intelligence無極限"
+title: "地端 AI Agent + AutoGen<br/>Token Intelligence無極限"
 title-slide-attributes:
   data-background-image: ./pics/TitleBackground_light.svg
   data-background-size: cover
@@ -10,7 +10,6 @@ format:
         width: 1300
         height: 1000
         slide-tone: false
-        slide-level: 3
         theme: simple
         menu:
             side: right
@@ -32,6 +31,8 @@ format:
                 </style>
 from: markdown+emoji
 code-annotations: below
+editor:
+    render-on-save: true
 ---
 
 # Agenda
@@ -41,8 +42,8 @@ code-annotations: below
 
 * What and Why is Agentic AI?
 * **AutoGen for .NET** (v0.2.x) overview
-* Local LLM running options & caveats
-* Demo & Future vision 
+* Local LLM AI inference options 
+* Demo & Future thoughts
 
 :::
 ::: {.column width="20%"}
@@ -55,6 +56,10 @@ code-annotations: below
 
 :::
 ::::
+
+{{< include "_AutoGen_overview.qmd" >}}
+
+{{< include "_LocalLLM.qmd" >}}
 
 # Resources & References {style="font-size: 0.7em;"}
 
@@ -72,6 +77,7 @@ code-annotations: below
 * [AutoGen, AG2, and Semantic Kernel: Complete Guide](https://pub.towardsai.net/autogen-ag2-and-semantic-kernel-complete-guide-971cdeefe1e9)
 * [🧑‍💻 Agentic AI Workshop - AutoGen](https://github.com/marconsilva/AgenticWorkshop-AutoGen)
 * [🧑‍💻 AgenticAI Practices - AutoGen & Semantic Kernel Demonstration](https://github.com/brnbrns/ai-examples/tree/main/agnet)
+* [Introducing Microsoft Agent Framework: The Open-Source Engine for Agentic AI Apps](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/)
 * [AutoGen to Microsoft Agent Framework Migration Guide](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen/)
 * [🎞️ Deep Dive into Microsoft Agent Framework for AutoGen Users](https://youtu.be/JlzteydCK_Q?si=0-YZUVPkU3RBgo4C)
 * [Assistant Agent & User Proxy Agent use cases explain](https://blog.nashtechglobal.com/crafting-agents-in-autogen-net/)
@@ -82,6 +88,7 @@ code-annotations: below
 * [Agent-ChatRoom](https://github.com/LittleLittleCloud/Agent-ChatRoom)
 * [StepWise](https://github.com/LittleLittleCloud/StepWise)
 * [ML.NET ***Microsoft.ML.GenAI.Core*** nuget source code](https://github.com/dotnet/machinelearning/tree/v5.0.0/src/Microsoft.ML.GenAI.Core)
+* [WARNING: ONNX doesn't support function calling, so any function tools passed to the agent will be ignored.](https://github.com/microsoft/agent-framework/tree/main/dotnet/samples/GettingStarted/AgentProviders/Agent_With_ONNX)
 
 ---
 

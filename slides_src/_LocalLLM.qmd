@@ -1,0 +1,60 @@
+---
+# Some notes about setting up Local LLM environment
+editor:
+    render-on-save: true
+---
+
+## Local LLM architecture overview
+
+![](./pics/Local_AI_architect.svg){.r-stretch}
+
+We only care about using Local LLM model that can provide OpenAI compatible RESTful API endpoint, so that AutoGen for .NET agent can use it as LLM backend service.
+
+## xPU TOPs myth
+
+![](./pics/Intel_total_TOPs.png){.r-stretch}
+
+Currrently most of **_NPU_** are only support ONNX model format, and lack of some advanced features(ex: function-calling) that Agentic AI usually need.
+
+## Total VRAM myth
+
+::: {.r-stack}
+![](./pics/AMD_iGPU_dGPU_config_LMStudio.png){.fragment .nostretch fig-align="center" width="100%" height="100%" .fade-out}
+
+![](./pics/AMD_GPU_ROCm_LMStudio_error.png){.fragment .nostretch fig-align="center" width="100%" height="100%" .fade-in }
+:::
+
+## [ASUS Ascent GX10](https://www.asus.com/us/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/){target="_blank"}
+
+![](./pics/ASUSAscentGX10.png){.r-stretch}
+
+---
+
+It has extensible cable that can connect multiple machines together for settup up local AI inference cluster.
+
+![](./pics/ASUSAscentGX10_backview.png){.r-stretch}
+
+
+## External Thunderbolt GPU enclosure
+
+::: {.r-stack}
+![](./pics/RTXA5000_1.png){.fragment .nostretch fig-align="center" width="50%" height="60%" .fade-out}
+    
+![](./pics/RTXA5000_2.png){.fragment .nostretch fig-align="center" width="100%" height="70%" .fade-in-then-out }
+
+![](./pics/RTXA5000_3.png){.fragment .nostretch fig-align="center" width="50%" height="30%" .fade-in }
+:::
+
+## Current speed winner (CUDA)
+
+::: columns
+::: {.column width="50%"}
+![](./pics/Nvidia_gpt-oss-20b.png)
+:::
+
+::: {.column width="50%"}
+![](./pics/AMD_gpt-oss-20b.png)
+:::
+:::
+
+> The more you buy, the more **(_Time_)** you save!
