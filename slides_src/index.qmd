@@ -64,6 +64,10 @@ editor:
 
 ![](./pics/AutoGen_Idea_Agent.png){.r-stretch}
 
+::: {.text-center style="font-size: 0.8em;"}
+<https://arxiv.org/abs/2308.08155>
+:::
+
 ## Local LLM AI Agent benefits
 
 :::: {.columns}
@@ -77,17 +81,16 @@ editor:
 ::: {.column width="50%"}
 
 :::: {.r-stack}
-![](./pics/AI_nationalism.png){.fragment .nostretch fig-align="center" width="100%" height="100%" .fade-in}
+![](./pics/AI_nationalism.png){.fragment .nostretch fig-align="center" width="100%" height="100%" .fade-in-then-out}
+
+::: {.text-center style="font-size: 0.8em;" height="50%" .fragment .fade-down}
+![](./pics/You_still_have_two.png)
+ <https://www.facebook.com/BiTeXiaoTu>{target="_blank"}
+:::
 ::::
 
 :::
 ::::
-
-##
-
-![](./pics/You_still_have_two.png){.r-stretch}
-
-<https://www.facebook.com/BiTeXiaoTu>
 
 {{< include "_AutoGen_overview.qmd" >}}
 

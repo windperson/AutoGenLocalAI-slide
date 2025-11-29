@@ -16,7 +16,7 @@ We only care about using Local LLM model that can provide OpenAI compatible REST
 
 ![](./pics/Intel_total_TOPs.png){.r-stretch}
 
-Currrently most of **_NPU_** are only support ONNX model format, and lack of some advanced features(ex: function-calling) that Agentic AI usually need.
+Currrently most of **_NPU_(s)** are only support ONNX model format, and lack of some advanced features(ex: function-calling) that Agentic AI usually need.
 
 ## Total VRAM myth
 
