@@ -246,14 +246,21 @@
 <h2>AutoGen design concepts</h2>
 <p>AutoGen (Python) is designed to simplify the development of agentic AI applications by providing:</p>
 <ul>
-<li><strong>Agent</strong>:<br>Autonomous entities that can perform tasks, make decisions, and interact with other agents or users.</li>
-<li><strong>Agent Runtime Environment</strong>:<br>Standalone or Distributed runtime environment, facilitates communication between agents, manages their identities and lifecycles, and enforce security and privacy boundaries. <img data-src="./pics/application-stack.svg"><br>So it is possible to run agents across multiple machines:<br><img data-src="./pics/architecture-distributed.svg"><br></li>
-<li><strong>Memory</strong>:<br>Included in <a href="https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html">“AgentChat” package</a>, Mechanisms for agents to retain and recall information, facilitating long-term interactions and learning.</li>
-<li><strong>Messaging</strong>:<br>Provids Topic and Subscription ways for either direct or broadcast communication between agents.</li>
-<li><strong>Tool Use</strong>:<br>Enables agents to utilize external tools and APIs to enhance their capabilities and perform complex tasks.</li>
-<li><strong>Workbench</strong>:<br>Provides a collection of Tools for agents to use, including <a href="https://modelcontextprotocol.io/">Model Context Protocol (MCP)</a>.</li>
-<li><strong>Logging &amp; Monitoring</strong>:<br>Built-in support for logging and monitoring agent activities via <a href="https://opentelemetry.io/">OpenTelemetry</a>, aiding in debugging and performance analysis.</li>
-<li><strong>Group Chat/Workflow</strong>:<br>Supports multi-agent various types of group chat and workflow orchestration, enabling complex interactions and collaborations among agents.</li>
+<li><p><strong>Agent</strong>:<br>Autonomous entities that can perform tasks, make decisions, and interact with other agents or users.</p></li>
+<li><p><strong>Agent Runtime Environment</strong>:<br>Standalone or Distributed runtime environment, facilitates communication between agents, manages their identities and lifecycles, and enforce security and privacy boundaries.</p>
+<div style="color-scheme: light;">
+<p><img data-src="./pics/application-stack.svg"></p>
+</div>
+<p>So it is possible to run agents across multiple machines:</p>
+<div style="color-scheme: light;">
+<p><img data-src="./pics/architecture-distributed.svg"></p>
+</div></li>
+<li><p><strong>Memory</strong>:<br>Included in <a href="https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html">“AgentChat” package</a>, Mechanisms for agents to retain and recall information, facilitating long-term interactions and learning.</p></li>
+<li><p><strong>Messaging</strong>:<br>Provids Topic and Subscription ways for either direct or broadcast communication between agents.</p></li>
+<li><p><strong>Tool Use</strong>:<br>Enables agents to utilize external tools and APIs to enhance their capabilities and perform complex tasks.</p></li>
+<li><p><strong>Workbench</strong>:<br>Provides a collection of Tools for agents to use, including <a href="https://modelcontextprotocol.io/">Model Context Protocol (MCP)</a>.</p></li>
+<li><p><strong>Logging &amp; Monitoring</strong>:<br>Built-in support for logging and monitoring agent activities via <a href="https://opentelemetry.io/">OpenTelemetry</a>, aiding in debugging and performance analysis.</p></li>
+<li><p><strong>Group Chat/Workflow</strong>:<br>Supports multi-agent various types of group chat and workflow orchestration, enabling complex interactions and collaborations among agents.</p></li>
 </ul>
 </section>
 <section id="autogen-for-.net-features" class="slide level2 small scrollable">
@@ -283,7 +290,7 @@
 <section id="local-llm-architecture-overview" class="slide level2">
 <h2>Local LLM architecture overview</h2>
 <img data-src="./pics/Local_AI_architect.svg" class="r-stretch">
-<p>We only care about using Local LLM model that can provide OpenAI compatible RESTful API endpoint, so that AutoGen for .NET agent can use it as LLM backend service.</p>
+<p>We only care about using Local LLM model that can provide <a href="https://bentoml.com/llm/llm-inference-basics/openai-compatible-api" target="_blank">OpenAI compatible RESTful API</a> endpoint, so that AutoGen for .NET agent can use it as LLM backend service.</p>
 </section>
 <section id="xpu-tops-myth" class="slide level2">
 <h2>xPU TOPs myth</h2>
@@ -387,6 +394,7 @@
 <ul>
 <li><a href="https://arxiv.org/abs/2506.02153">📃 Small Language Models are the Future of Agentic AI</a></li>
 <li><a href="https://arxiv.org/abs/2511.12869">📃 On the Fundamental Limits of LLMs at Scale</a></li>
+<li><a href="https://bentoml.com/llm/">BentoML LLM Inference Handbook</a></li>
 <li><a href="https://medium.com/@isanghao/what-is-quantization-and-why-it-matters-for-inference-c62135f7cfa7">What is Quantization and Why It Matters for AI Inference?</a></li>
 <li><a href="https://www.theregister.com/2025/08/10/openai_mxfp4/">How OpenAI used a new data type to cut inference costs by 75%</a></li>
 <li><a href="https://apxml.com/posts/how-to-calculate-vram-requirements-for-an-llm">How To Calculate GPU VRAM Requirements for an Large-Language Model</a></li>
@@ -414,6 +422,7 @@
 <li><a href="https://youtu.be/-R65iP8V1zc?si=pyTXPQRHMYBS-Cw8">🎞️ 首款USB4V2迷你主机Minisforum MS-S1 Max (AI MAX+395)详细评测，包含AI集群及雷电5显卡坞</a></li>
 <li><a href="https://youtu.be/2kgYiQ_3CB4?si=r4Hn3Gk9kprV-6Bw">🎞️ 💥RTX 4090跑42B模型成功！Reddit網友震撼全場🧠 你也能在家跑大型AI！4090用戶實測Local LLM全攻略</a></li>
 <li><a href="https://www.asus.com/us/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/">ASUS Ascent GX10 product page</a></li>
+<li><a href="https://www.geeks3d.com/gpushark/">GPU Shark 2</a></li>
 </ul>
 <hr>
 </div>
@@ -436,6 +445,11 @@
 </section>
 
 <section id="sponsors" class="title-slide slide level1 center" style="visibility: hidden;" data-visibility="uncounted" data-background-image="./pics/EndSlide_light.svg" data-background-position="center" data-background-repeat="no-repeat" data-background-size="100%">
+<h1>Sponsors</h1>
+
+</section>
+
+<section id="sponsors-1" class="title-slide slide level1 center" style="visibility: hidden;" data-visibility="uncounted" data-background-image="./pics/Sponsors.svg" data-background-position="center" data-background-repeat="no-repeat" data-background-size="100%">
 <h1>Sponsors</h1>
 
 </section>
