@@ -10,7 +10,7 @@ editor:
 
 ![](./pics/Local_AI_architect.svg){.r-stretch}
 
-We only care about using Local LLM model that can provide OpenAI compatible RESTful API endpoint, so that AutoGen for .NET agent can use it as LLM backend service.
+We only care about using Local LLM model that can provide [OpenAI compatible RESTful API](https://bentoml.com/llm/llm-inference-basics/openai-compatible-api){target="_blank"} endpoint, so that AutoGen for .NET agent can use it as LLM backend service.
 
 ## xPU TOPs myth
 

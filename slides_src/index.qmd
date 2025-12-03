@@ -10,6 +10,7 @@ format:
         width: 1300
         height: 1000
         slide-tone: false
+        respect-user-color-scheme: false
         theme: simple
         menu:
             side: right
@@ -136,6 +137,7 @@ editor:
 
 * [📃 Small Language Models are the Future of Agentic AI](https://arxiv.org/abs/2506.02153)
 * [📃 On the Fundamental Limits of LLMs at Scale](https://arxiv.org/abs/2511.12869)
+* [BentoML LLM Inference Handbook](https://bentoml.com/llm/)
 * [What is Quantization and Why It Matters for AI Inference?](https://medium.com/@isanghao/what-is-quantization-and-why-it-matters-for-inference-c62135f7cfa7)
 * [How OpenAI used a new data type to cut inference costs by 75%](https://www.theregister.com/2025/08/10/openai_mxfp4/)
 * [How To Calculate GPU VRAM Requirements for an Large-Language Model](https://apxml.com/posts/how-to-calculate-vram-requirements-for-an-llm)
@@ -163,6 +165,7 @@ editor:
 * [🎞️ 首款USB4V2迷你主机Minisforum MS-S1 Max (AI MAX+395)详细评测，包含AI集群及雷电5显卡坞](https://youtu.be/-R65iP8V1zc?si=pyTXPQRHMYBS-Cw8)
 * [🎞️ 💥RTX 4090跑42B模型成功！Reddit網友震撼全場🧠 你也能在家跑大型AI！4090用戶實測Local LLM全攻略](https://youtu.be/2kgYiQ_3CB4?si=r4Hn3Gk9kprV-6Bw)
 * [ASUS Ascent GX10 product page](https://www.asus.com/us/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/)
+* [GPU Shark 2](https://www.geeks3d.com/gpushark/)
 
 ---
 
@@ -186,3 +189,5 @@ Any Questions?<br/>🙋‍♂️🙋‍♀️🙋
 ::::
 
 # Sponsors { style="visibility: hidden;" visibility="uncounted" background-image="./pics/EndSlide_light.svg" background-position="center" background-repeat="no-repeat" background-size="100%"}
+
+# Sponsors { style="visibility: hidden;" visibility="uncounted" background-image="./pics/Sponsors.svg" background-position="center" background-repeat="no-repeat" background-size="100%"}

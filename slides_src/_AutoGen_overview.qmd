@@ -28,7 +28,17 @@ AutoGen (Python) is designed to simplify the development of agentic AI applicati
 
 * **Agent**:<br/>Autonomous entities that can perform tasks, make decisions, and interact with other agents or users.
 * **Agent Runtime Environment**:<br/>Standalone or Distributed runtime environment, facilitates communication between agents, manages their identities and lifecycles, and enforce security and privacy boundaries.
-   ![](./pics/application-stack.svg)<br/>So it is possible to run agents across multiple machines:<br/>![](./pics/architecture-distributed.svg)<br/>
+   
+  ::: { style="color-scheme: light;"}
+  ![](./pics/application-stack.svg)
+  :::
+    
+  So it is possible to run agents across multiple machines:
+  
+  ::: { style="color-scheme: light;"}
+  ![](./pics/architecture-distributed.svg)
+  :::
+    
 * **Memory**:<br/>Included in ["AgentChat" package](https://microsoft.github.io/autogen/stable/user-guide/agentchat-user-guide/index.html), Mechanisms for agents to retain and recall information, facilitating long-term interactions and learning.
 * **Messaging**:<br/>Provids Topic and Subscription ways for either direct or broadcast communication between agents.
 * **Tool Use**:<br/>Enables agents to utilize external tools and APIs to enhance their capabilities and perform complex tasks.
