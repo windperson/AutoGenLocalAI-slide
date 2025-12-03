@@ -1,7 +1,3 @@
 project:
   render:
   - slides_src/index.qmd
-website:
-  open-graph:
-    description: A slide deck about AutoGen for .NET and Local LLM AI inference options
-    image: pics/FB_banner.png
