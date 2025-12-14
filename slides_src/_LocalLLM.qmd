@@ -51,15 +51,15 @@ It has extensible cable that can connect multiple machines together for settup u
 ![](./pics/RTXA5000_3.png){.fragment .nostretch fig-align="center" width="50%" height="30%" .fade-in }
 :::
 
-## Current speed leader (nVida CUDA)
+## Current speed leader (nVidia CUDA wins)
 
 ::: columns
 ::: {.column width="50%"}
-![](./pics/Nvidia_gpt-oss-20b.png)
+![External Thunderbolt GPU enclosure](./pics/Nvidia_gpt-oss-20b.png)
 :::
 
 ::: {.column width="50%"}
-![](./pics/AMD_gpt-oss-20b.png)
+![Built-in AMD GPU](./pics/AMD_gpt-oss-20b.png)
 :::
 :::
 
